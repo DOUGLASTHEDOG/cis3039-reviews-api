@@ -1,0 +1,61 @@
+Error seeding reviews: ErrorResponse: The input authorization token can't serve the request. The wrong key is being used or the expected payload is not built as per the protocol. For more info: https://aka.ms/cosmosdb-tsg-unauthorized. Server used the following payload to sign: 'get
+
+
+wed, 29 oct 2025 09:56:29 gmt
+
+'
+ActivityId: e3e92e4f-7cce-46cd-968b-353cdb50a94f, Microsoft.Azure.Documents.Common/2.14.0
+    at httpRequest (/workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/request/RequestHandler.ts:145:42)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/retry/retryUtility.ts:128:26
+    at async addDiagnosticChild (/workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/utils/diagnostics.ts:68:22)
+    at async addDiagnosticChild (/workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/utils/diagnostics.ts:68:22)
+    at async ClientContext.getDatabaseAccount (/workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/ClientContext.ts:801:63)
+    at async CosmosClient.getDatabaseAccountInternal (/workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/CosmosClient.ts:252:22)
+    at async withMetadataDiagnostics (/workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/utils/diagnostics.ts:102:27)
+    at async GlobalEndpointManager.resolveServiceEndpointInternal (/workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/globalEndpointManager.ts:218:32)
+    at async ClientContext.read (/workspaces/cis3039-reviews-api/node_modules/@azure/cosmos/src/ClientContext.ts:182:26) {
+  code: 401,
+  substatus: undefined,
+  body: {
+    code: 'Unauthorized',
+    message: "The input authorization token can't serve the request. The wrong key is being used or the expected payload is not built as per the protocol. For more info: https://aka.ms/cosmosdb-tsg-unauthorized. Server used the following payload to sign: 'get\n" +
+      '\n' +
+      '\n' +
+      'wed, 29 oct 2025 09:56:29 gmt\n' +
+      '\n' +
+      "'\r\n" +
+      'ActivityId: e3e92e4f-7cce-46cd-968b-353cdb50a94f, Microsoft.Azure.Documents.Common/2.14.0'
+  },
+  headers: {
+    'transfer-encoding': 'chunked',
+    'content-type': 'application/json',
+    'content-location': 'https://reviews-lab-ab47-cosmos-uksouth.documents.azure.com/',
+    server: 'Microsoft-HTTPAPI/2.0',
+    'x-ms-activity-id': 'e3e92e4f-7cce-46cd-968b-353cdb50a94f',
+    'strict-transport-security': 'max-age=31536000',
+    'x-ms-gatewayversion': 'version=2.14.0',
+    date: 'Wed, 29 Oct 2025 09:56:29 GMT',
+    'x-ms-throttle-retry-count': 0,
+    'x-ms-throttle-retry-wait-time-ms': 0
+  },
+  activityId: 'e3e92e4f-7cce-46cd-968b-353cdb50a94f',
+  retryAfterInMs: undefined,
+  retryAfterInMilliseconds: undefined,
+  diagnostics: CosmosDiagnostics {
+    clientSideRequestStatistics: {
+      requestStartTimeUTCInMs: 1761731789942,
+      requestDurationInMs: 186,
+      totalRequestPayloadLengthInBytes: 0,
+      totalResponsePayloadLengthInBytes: 0,
+      locationEndpointsContacted: [Array],
+      metadataDiagnostics: [Object],
+      retryDiagnostics: [Object],
+      gatewayStatistics: [],
+      encryptionDiagnostics: undefined
+    },
+    diagnosticNode: undefined,
+    clientConfig: undefined
+  },
+  requestCharge: undefined
+}
